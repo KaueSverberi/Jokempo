@@ -23,7 +23,7 @@ const playTheGame = (human, machine) => {
     console.log('Humano: ' + human + ' Maquina: ' + machine)
 
     if (human === machine) {
-        result.innerHTML = "Empatou"
+        result.innerHTML = "Empatou," + ` O bot escolheu ${machine}`
     } else if (
         human === 'Rock' && machine === 'Scissors' ||
         human === 'Paper' && machine === 'Rock' ||
@@ -31,10 +31,10 @@ const playTheGame = (human, machine) => {
     ) {
         humanScoreNumber++
         humanScore.innerHTML = humanScoreNumber
-        result.innerHTML = "Você Ganhou"
+        result.innerHTML = "Você Ganhou," + ` O bot escolheu ${machine}`
     } else{
         machineScoreNumber++
         botScore.innerHTML = machineScoreNumber
-        result.innerHTML = "Você Perdeu"
+        result.innerHTML = `Você Perdeu,` + ` O bot escolheu ${machine}`
     }
 }
